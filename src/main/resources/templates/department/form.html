@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <div>
+            <form th:action="@{/department/save}" method="post" th:object="${department}">
+                <input type="text" id="id" name="department_id" th:field="*{department_id}">
+                <input type="text" id="name" name="name" th:field="*{name}">
+                <select th:field="*{region}">
+                    <option th:each="region : ${regions}" th:value="${region.region_id}" 
+                    th:selected="${region.region_id}" th:text="${region.name}"></option>
+                </select>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <div>
+            <form th:action="@{/region/save}" method="post" th:object="${region}">
+                <input id="id" name="region_id" th:field="*{region_id}" placeholder="id" type="text" />
+                <input id="name" name="name" th:field="*{name}" placeholder="name" type="text" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
